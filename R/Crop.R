@@ -30,9 +30,6 @@ Crop <- function(input_path, output_path, height, width){
     stop("TypeError: Output path of the image should be string.")
   }
   img <- readImage(input_path)
-  if (dim(img)[3] != 3){
-    stop("TypeError: Image must be expressed as 3D array")
-  }
   if (height > dim(img)[1]){
     stop("ValueError: Desired height cannot exceeds original height")
   }
@@ -43,7 +40,7 @@ Crop <- function(input_path, output_path, height, width){
     stop("ValueError: Height and width for the desired image must be integer")
   }
   if(height<=0 || width <=0){
-    stop("ValueError: Height and width for the desired image dmust be greater than 0")
+    stop("ValueError: Height and width for the desired image must be greater than 0")
   }
   print("Cropping the image...")
 
@@ -71,5 +68,6 @@ Crop <- function(input_path, output_path, height, width){
   output_img <- img[start_row:end_row, start_col:end_col,]
   save <-writePNG(output_img, target = output_path)
   print(paste0("Saving cropped image to ", output_path))
+  return(output_path)
 
 }
