@@ -43,7 +43,7 @@ Crop <- function(input_path, output_path, height, width){
     stop("ValueError: Height and width for the desired image must be integer")
   }
   if(height<=0 || width <=0){
-    stop("ValueError: Height and width for the desired image dmust be greater than 1'")
+    stop("ValueError: Height and width for the desired image dmust be greater than 0")
   }
   print("Cropping the image...")
 
