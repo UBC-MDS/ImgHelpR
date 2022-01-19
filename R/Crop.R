@@ -34,7 +34,10 @@ Crop <- function(input_path, output_path, height, width){
     stop("TypeError: Image must be expressed as 3D array")
   }
   if (height > dim(img)[1]){
-    stop("ValueError: Desired height cannot exceeds original height and width")
+    stop("ValueError: Desired height cannot exceeds original height")
+  }
+  if (width > dim(img)[2]){
+    stop("ValueError: Desired width cannot exceeds original width")
   }
   if (height%%1 != 0 || width%%1 != 0){
     stop("ValueError: Height and width for the desired image must be integer")
