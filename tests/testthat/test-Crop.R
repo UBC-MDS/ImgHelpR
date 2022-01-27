@@ -1,7 +1,5 @@
-context("Crop")
 library(testthat)
 library(OpenImageR)
-library(here)
 library(rprojroot)
 # Set package root
 root <- is_testthat
