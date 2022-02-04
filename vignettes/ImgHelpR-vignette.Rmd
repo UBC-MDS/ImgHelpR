@@ -14,6 +14,13 @@ knitr::opts_chunk$set(
 )
 ```
 
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
 ```{r setup}
 library(ImgHelpR)
 ```
@@ -29,7 +36,6 @@ To explore basic image manipulation with ImgHelpR, a test image named `ubc.jpeg`
 ```{r}
 # read image in via JPEG
 ubc <- jpeg::readJPEG('../test_img/ubc.jpeg')
-
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
@@ -55,17 +61,13 @@ ImgHelpR is comprised of 4 main functions:
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
-
 # crop image
 cropped_ubc <- Crop(ubc, 300, 300)
-
 org_dim <- dim(ubc)
 crop_dim <- dim(cropped_ubc)
-
 # display cropped image
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(cropped_ubc, 0,0,1,1)
-
 # print current dimensions of test image
 print('Original dimensions: ') 
 org_dim
@@ -81,10 +83,8 @@ crop_dim
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
-
 # rotate image 
 ubc_180 <- ImgRotate(ubc, 180)
-
 # display rotated image
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc_180, 0,0,1,1)
@@ -98,14 +98,11 @@ This function converts an image's color to gray, red, green, or blue. There are 
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
-
 # convert to gray 
 green_ubc <- ColorConv(ubc,color = "green")
-
 # display green image
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(green_ubc, 0,0,1,1)
-
 ```
 
 ## Compress Images with ImgCompress()
@@ -118,12 +115,9 @@ The function returns an array, which can be read into `rasterImage` as shown in 
 # display test image 
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(ubc, 0,0,1,1)
-
 # compress image 
-compress_ubc <- ImgCompress(ubc, method = "resize", level = 3)
-
+compress_ubc <- ImgCompress(ubc, method = "resize", level = 2)
 # display compressed image
 plot(0:1,0:1,type='n',ann=FALSE,axes=FALSE)
 rasterImage(compress_ubc, 0,0,1,1)
-
 ```
