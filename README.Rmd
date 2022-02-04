@@ -30,7 +30,6 @@ The goal of ImgHelpR is a simple R package to help users crop, rotate, compress,
 devtools::install_github("UBC-MDS/ImgHelpR")
 ```
 
-
 ## Usage
 
 ```{r example}
@@ -46,6 +45,10 @@ library(ImgHelpR)
 - `ColorConv(img, color)` This function converts an image to a color specified by user-input. The image is converted by changing the pixel values of the image's array. 
 
 - `ImgCompress(img, method, level=1)` This function compresses an image to a user-defined compression level. The compression methods supported by this function are single value decomposition (SVD) and simple image resize. Additionally, users can select the compression levels desired (highest compression level = 1,  lowest compression level = 2).
+
+## Package website:
+
+For examples of how to use each feature, check out [here](https://ubc-mds.github.io/ImgHelpR/).
 
 ## R Ecosystem
 

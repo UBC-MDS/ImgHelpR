@@ -48,8 +48,11 @@ library(ImgHelpR)
     simple image resize. Additionally, users can select the compression
     levels desired (highest compression level = 1, lowest compression
     level = 2).
-    
-    For examples of how to use each feature, check out [ImgHelpR's vignette](https://ubc-mds.github.io/ImgHelpR/articles/ImgHelpR-vignette.html)
+
+## Package website:
+
+For examples of how to use each feature, check out
+[here](https://ubc-mds.github.io/ImgHelpR/).
 
 ## R Ecosystem
 
