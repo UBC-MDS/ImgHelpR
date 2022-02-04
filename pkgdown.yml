@@ -3,7 +3,7 @@ pkgdown: 2.0.2
 pkgdown_sha: ~
 articles:
   ImgHelpR-vignette: ImgHelpR-vignette.html
-last_built: 2022-02-04T02:30Z
+last_built: 2022-02-04T02:32Z
 urls:
   reference: https://ubc-mds.github.io/ImgHelpR/reference
   article: https://ubc-mds.github.io/ImgHelpR/articles
